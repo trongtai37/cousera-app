@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 	Button, Modal, ModalHeader, ModalBody,
 	Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
+import { baseUrl } from '../redux/baseUrl';
 
 export class Header extends Component {
 	constructor(props) {
@@ -65,8 +66,8 @@ export class Header extends Component {
 					<div className="container">
 						<NavbarToggler onClick={this.toggleNav} />
 						<NavbarBrand className="mr-auto">
-							<NavLink className="nav-link" to="/home">
-								<img src="assets/images/logo.png" alt="Ristorante Con Fusion" />
+							<NavLink className='nav-link' to="/home">
+								<img style={{width: '80px', height: '50px'}} src={baseUrl + 'images/logo.png'} alt="Ristorante Con Fusion" />						
 							</NavLink>
 						</NavbarBrand>
 						<Collapse navbar isOpen={this.state.isNavOpen}>

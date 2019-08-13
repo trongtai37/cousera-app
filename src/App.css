@@ -35,3 +35,25 @@ address{
 .navbar-toggler{
     background-color: #9575CD;
 }
+
+.pages-enter {
+    opacity: 0.01;
+    transform: translateX(-100%);    
+}
+
+.pages-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 300ms ease-in;
+}
+
+.pages-exit {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.pages-exit-active {
+    opacity: 0.01;
+    transform: translateX(100%);
+    transition: all 300ms ease-in;
+}
