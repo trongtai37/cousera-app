@@ -3,7 +3,6 @@ import { Card, CardImg, CardBody, CardTitle, CardText, Row, ModalHeader, Label, 
 import { Link } from 'react-router-dom'
 import { Control, LocalForm, Errors} from 'react-redux-form';
 import { Loading } from './LoadingComponent';
-import { baseUrl } from '../redux/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 const required = (val) => (val) && (val.length);
@@ -89,7 +88,7 @@ class CommentForm extends Component {
 					</ModalBody>
 				</Modal>
 				<Button outline onClick={this.toggleModal}>
-					<span className="fa fa-pencil fa-lg"></span> Submit Comment
+					<span className="fa fa-pencil fa-lg"></span>{' '}Submit Comment
 				</Button>
 			</div>
 		)
@@ -102,9 +101,9 @@ function RenderDish({ dish }) {
 		<div className="col-12 col-md-5 m-1">
 			<FadeTransform in transFormProps={{exitTransform: 'scale(0.5) translateY(-50%)'}}>
 				<Card>
-					<CardImg src={baseUrl + dish.image} alt={dish.name} />
+					<CardImg src={dish.image} alt={dish.name} />
 					<CardBody>
-						<CardTitle>{dish.name}</CardTitle>
+						<CardTitle tag='h4'>{dish.name}</CardTitle>
 						<CardText>{dish.description}</CardText>
 					</CardBody>
 				</Card>
@@ -124,10 +123,12 @@ function RenderComment({ comments, dishId, postComment }) {
 								return (
 									<Fade in>
 										<li key={comment.id}>
-										<p>{comment.comment}</p>
-										<p>
+										<strong>
+											<i>
 											-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comment.date)))}
-										</p>
+											</i>
+										</strong>
+										<p>{comment.comment}</p>
 									</li>
 									</Fade>
 									

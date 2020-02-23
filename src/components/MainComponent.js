@@ -78,6 +78,14 @@ export class Main extends Component {
 			);
 		}
 
+		const ContactUs = () => {
+			return (
+				<Contact resetFeedbackForm={this.props.resetFeedbackForm} 
+					postFeedback={this.props.postFeedback}
+				/>
+			)
+		}
+
 		return (
 			<div>
 				<Header />
@@ -89,7 +97,7 @@ export class Main extends Component {
 							<Route exact path='/menu' component={() =>
 								<Menu dishes={this.props.dishes} />}
 							/>					
-							<Route path='/contactus' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback}/>} />
+							<Route path='/contactus' component={ContactUs} />
 							<Route path='/aboutus' component={AboutUs} />
 							<Redirect to="/home" />
 						</Switch>

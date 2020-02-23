@@ -40,6 +40,7 @@ export class Header extends Component {
 	render() {
 		return (
 			<div>
+				{/* Modal Login Form */}
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
 					<ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
 					<ModalBody>
@@ -62,12 +63,13 @@ export class Header extends Component {
 						</Form>
 					</ModalBody>
 				</Modal>
+				{/* Header of Website */}
 				<Navbar  className="navbar-dark" dard expand="md">
 					<div className="container">
 						<NavbarToggler onClick={this.toggleNav} />
 						<NavbarBrand className="mr-auto">
 							<NavLink className='nav-link' to="/home">
-								<img style={{width: '80px', height: '50px'}} src={baseUrl + 'images/logo.png'} alt="Ristorante Con Fusion" />						
+								<img style={{width: '80px', height: '80px'}} src={baseUrl + 'images/restaurant.png'} alt="The Line Restaurant" />						
 							</NavLink>
 						</NavbarBrand>
 						<Collapse navbar isOpen={this.state.isNavOpen}>
@@ -76,28 +78,28 @@ export class Header extends Component {
 								<NavItem>
 									<NavLink className="nav-link" to="/home">
 										<span className="fa fa-home fa-lg"></span>
-										Home
-									</NavLink>
-								</NavItem>
-								{/* About Us Item */}
-								<NavItem>
-									<NavLink className="nav-link" to="/aboutus">
-										<span className="fa fa-info fa-lg"></span>
-										About Us
+										{' '}Home
 									</NavLink>
 								</NavItem>
 								{/* Menu Item */}
 								<NavItem>
 									<NavLink className="nav-link" to="/menu">
 										<span className="fa fa-list fa-lg"></span>
-										Menu
+										{' '} Menu
 									</NavLink>
 								</NavItem>
+								{/* About Us Item */}
+								<NavItem>
+									<NavLink className="nav-link" to="/aboutus">
+										<span className="fa fa-info fa-lg"></span>
+										{' '} About Us
+									</NavLink>
+								</NavItem>								
 								{/* Contact Us Item */}
 								<NavItem>
 									<NavLink className="nav-link" to="/contactus">
 										<span className="fa fa-phone fa-lg"></span>
-										Contact Us
+										{' '}Contact Us
 									</NavLink>
 								</NavItem>
 							</Nav>
@@ -106,8 +108,9 @@ export class Header extends Component {
 
 					<Nav className="ml-auto" navbar>
 						<NavItem>
-							<Button outline onClick={this.toggleModal}>
-								<span className="fa fa-sign-in fa-lg"></span>Login
+							<Button outline color="secondary" onClick={this.toggleModal}>
+								<span className="fa fa-sign-in fa-lg"></span>
+								<strong>{' '}Login</strong>
 							</Button>
 						</NavItem>
 					</Nav>
@@ -116,10 +119,15 @@ export class Header extends Component {
 				<Jumbotron>
 					<div className="container">
 						<div className="row row-header">
-							<div className="col-12 col-sm-6">
-								<h1>Ristorante Con Fusion</h1>
+							<div className="col-sm-6">
+								<h1>The Line Restaurant</h1>
 								<p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-							</div>
+							</div>																					
+						</div>
+						<div className="row row-header">
+							<p className="lead col-sm">
+								<Button color="primary">Learn More >></Button>
+							</p>
 						</div>
 					</div>
 				</Jumbotron>

@@ -1,5 +1,6 @@
 {
   "name": "confusion",
+  "homepage": "https://github.com/trongtai37/confusion-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
