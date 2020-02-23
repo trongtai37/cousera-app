@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/trongtai37/confusion-app/static/css/main.e968717d.chunk.css",
+    "main.js": "/trongtai37/confusion-app/static/js/main.3f7ef6b2.chunk.js",
+    "main.js.map": "/trongtai37/confusion-app/static/js/main.3f7ef6b2.chunk.js.map",
+    "runtime~main.js": "/trongtai37/confusion-app/static/js/runtime~main.e8673049.js",
+    "runtime~main.js.map": "/trongtai37/confusion-app/static/js/runtime~main.e8673049.js.map",
+    "static/css/2.68b81609.chunk.css": "/trongtai37/confusion-app/static/css/2.68b81609.chunk.css",
+    "static/js/2.c28d590e.chunk.js": "/trongtai37/confusion-app/static/js/2.c28d590e.chunk.js",
+    "static/js/2.c28d590e.chunk.js.map": "/trongtai37/confusion-app/static/js/2.c28d590e.chunk.js.map",
+    "index.html": "/trongtai37/confusion-app/index.html",
+    "precache-manifest.3e7ac0f60726f378f9f0eed16c1f160e.js": "/trongtai37/confusion-app/precache-manifest.3e7ac0f60726f378f9f0eed16c1f160e.js",
+    "service-worker.js": "/trongtai37/confusion-app/service-worker.js",
+    "static/css/2.68b81609.chunk.css.map": "/trongtai37/confusion-app/static/css/2.68b81609.chunk.css.map",
+    "static/css/main.e968717d.chunk.css.map": "/trongtai37/confusion-app/static/css/main.e968717d.chunk.css.map",
+    "static/media/buffet.png": "/trongtai37/confusion-app/static/media/buffet.96d6bd20.png",
+    "static/media/font-awesome.min.css": "/trongtai37/confusion-app/static/media/fontawesome-webfont.fee66e71.woff"
+  }
+}
